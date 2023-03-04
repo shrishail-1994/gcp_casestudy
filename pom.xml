@@ -61,11 +61,11 @@
            <scope>import</scope>
         </dependency>
         
-         <dependency>
+      <!--   <dependency>
         <groupId>com.google.cloud</groupId>
         <artifactId>spring-cloud-gcp-starter-sql-mysql</artifactId>
         <version>4.1.1</version>
-      </dependency>
+      </dependency> -->
        
 	</dependencies>
 
