@@ -35,7 +35,7 @@ public class HelloWorldController
 	
 	List<Picture> pictureList = new ArrayList<>();
 	
-	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin //(origins = "http://localhost:4200")
 	@PostMapping("/authenticate")  
 	public Response authenticate(@RequestBody Credentials credentials) {		
 		
@@ -52,7 +52,7 @@ public class HelloWorldController
 		return response;
 	}  
 	
-	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin //(origins = "http://localhost:4200")
 	@PostMapping("/register")  
 	public Response register(@RequestBody User userData) {		
 	
@@ -64,7 +64,7 @@ public class HelloWorldController
 	}  
 	
 	
-	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin //(origins = "http://localhost:4200")
 	@GetMapping("/getFeed")  
 	public List<Feed> getFeed() {		
 		Iterable<Feed> feedIterator = dbService.getFeeds();		
@@ -78,7 +78,7 @@ public class HelloWorldController
 		return feedList;
 	}  
 	
-	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin //(origins = "http://localhost:4200")
 	@PostMapping("/addFeed")  
 	public Response addFeed(@RequestBody Feed data) {		
 		
@@ -89,7 +89,7 @@ public class HelloWorldController
 	}
 
 	//image upload
-	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin //(origins = "http://localhost:4200")
 	@PostMapping("/uploadImage")
     public Response uplaodImage(@RequestParam MultipartFile file)
             throws IOException {
@@ -155,7 +155,7 @@ public class HelloWorldController
 		 * decompressBytes(retrievedImage.get().getPic())); return img; }
 		 */
 		
-		@CrossOrigin(origins = "http://localhost:4200")
+		@CrossOrigin //(origins = "http://localhost:4200")
 		@GetMapping("/getAllImage")
 		public List<Picture> getAllImage() throws IOException {
 
